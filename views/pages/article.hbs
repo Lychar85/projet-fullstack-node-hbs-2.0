@@ -1,0 +1,71 @@
+
+<h1 class="title-admin">Planètes</h1>
+
+<div class="container-fluid admin">
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Ajouter une planète
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade modal-planète" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ajouter une planètes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/admin/article" method="POST" enctype="multipart/form-data">
+                        <div class="input-modal">
+                            <div class="divgp-3">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Nom de la planète</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" name="missionType">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">superficie <span>Km2</span></label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1"
+                                        name="description">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">diamètre <span>Km</span></label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" name="skills">
+                                </div>
+                            </div>
+
+                            <div class="divgp-3">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">distances moyennes à la terre
+                                        <span>Km</span></label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1"
+                                        name="location">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">distance moyennes au soleil
+                                        <span>Km</span></label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1"
+                                        name="date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Age <span>en milliards d'années</span></label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" name="dure">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Ajouter</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

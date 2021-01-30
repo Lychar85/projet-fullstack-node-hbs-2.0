@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
     "bcrypt": "^5.0.0",
     "connect-mongo": "^3.2.0",
     "dotenv": "^8.2.0",

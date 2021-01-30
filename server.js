@@ -28,13 +28,17 @@ app.use(expressSession({
     })
 }))
 // Handlebars--------------------------------------------
-const Handlebars = require("handlebars");
+const Handlebars = require("handlebars"),
+    {
+        allowInsecurePrototypeAccess
+    } = require('@handlebars/allow-prototype-access');
 
 const exphbs = require("express-handlebars");
 
 app.engine('hbs', exphbs({
     defaultLayout: 'main',
     extname: 'hbs',
+    handlebars: allowInsecurePrototypeAccess(Handlebars)
 }));
 
 app.set('view engine', 'hbs')
@@ -83,6 +87,9 @@ app.get('/inscription', (req, res) => {
 
 
 //admin--------------------------------------------
+app.get('/admin', (req,res) =>{
+    res.render('./pages/article')
+})
 app.post('/admin/article', articleModel )
 
 

@@ -33,8 +33,6 @@ const articleModel = new mongoose.Schema({
 
     },
 
-
-
 })
 
 module.exports = mongoose.model('mission', articleModel)

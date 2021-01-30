@@ -1,9 +1,13 @@
-const mission = require('../article/article');
+const mission = require('../../models/articleModel');
+
 
 module.exports = (req, res) => {
-    console.log(req);
     mission.create(
-        req.body, (err, docs) => {
-            res.redirect('/')
-        })
+        req.body, (err, user) => {
+
+            if (!err) {
+                res.redirect('/')
+            } else  return res.redirect('/admin') 
+        }
+    )
 }
